@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Урок 1. Знакомство с React и первые компоненты. Работа с JSX
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Задание 1 (тайминг 15 минут)
+1. Установить Node.js и NPM (если еще не установлены).
 
-In the project directory, you can run:
 
-### `npm start`
+2. Создать новый проект React, используя Create React App, выполнив
+команду npx `create-react-app my-first-react-app` в
+терминале.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Запустить проект, используя команду `npm start` в директории
+проекта, и убедиться, что приложение отображается в браузере.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Заменить шаблонный текст на произвольный
 
-### `npm run build`
+### Задание 2 (тайминг 15 минут)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Создать функциональный компонент Greeting, который выводит
+простое приветствие, например, 
+```html 
+<h1>Привет, React!</h1>
+```
+2. Импортировать компонент `Greeting` в `App.js` и использовать его
+внутри компонента `App`.
+3. Запустить приложение и убедиться, что приветствие отображается на
+странице.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Задание 3 (тайминг 25 минут)
+1. Создать функциональный компонент `CurrentTime`, который будет
+отображать текущее время, форматированное в удобочитаемом виде
+(например, "Текущее время: 14:35").
+2. Использовать объект `Date` для получения текущего времени и метод
+`toLocaleTimeString()` для его форматирования.
+3. Импортировать компонент `CurrentTime` в `App.js` и использовать его
+внутри компонента `App`, чтобы отобразить текущее время на странице.
+4. Добавить минимальную стилизацию для компонента `CurrentTime`,
+чтобы выделить отображаемое время (например, использовать `<h2>`
+для заголовка и немного CSS для улучшения внешнего вида).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Задание 4 (тайминг 20 минут)
+1. Модифицировать компонент `Greeting`, чтобы он выводил различные
+приветствия в зависимости от времени суток, например, "Доброе утро" или
+"Добрый вечер", используя условный рендеринг.
+2. Использовать 
+```javascript 
+new Date().getHours()
+```
+ для определения текущего времени и
+установить условие для отображения соответствующего приветствия.
+3. Запустить приложение и проверить, что отображается соответствующее
+приветствие в зависимости от времени суток.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Задание 5* (тайминг 20 минут)
+1. Создать функциональный компонент `EventCard`, который будет отображать
+информацию о событии: название, дату и место проведения. Компонент должен
+принимать эти данные через пропсы.
+2. В компоненте `App`, использовать компонент `EventCard` несколько раз с
+различными данными о событиях, переданными через пропсы, чтобы показать
+список предстоящих событий.
+3. Добавить минимальную стилизацию для компонента `EventCard`, используя CSS
+классы, чтобы визуально выделить информацию о каждом событии.
