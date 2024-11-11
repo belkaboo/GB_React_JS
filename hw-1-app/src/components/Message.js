@@ -1,5 +1,5 @@
 import React from 'react';
-import './Message.css'; // Импортируем стили
+import './Message.css';
 
 function Message({ text }) {
     return <div className="message">
