@@ -32,7 +32,45 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.Comments {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-item {
+  max-width: 600px;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #767575;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.delete-btn {
+  margin: 0 10px;
+  padding: 5px;
+  color: #282c34;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.delete-btn:hover {
+  color: red;
+}
+
+.delete-btn:active {
+  background-color: #61dafbdb;
+}
+
+p {
+  margin-top: 0;
 }
