@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import Greeting from './components/Greeting';
 import CurrentTime from './components/CurrentTime';
 import EventCard from "./components/EventCard";
+import Greeting from './components/Greeting';
 
 function App() {
   return (
