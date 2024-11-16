@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 function CurrentTime() {
     // Состояние для хранения текущего времени
-    const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
+    const [currentTime, setCurrentTime] = useState(new Date().getSeconds());
 
     useEffect(() => {
-        // Устанавливаем интервал обновления времени каждую секунду
         const timer = setInterval(() => {
-            setCurrentTime(new Date().toLocaleTimeString());
+            setCurrentTime(new Date().getSeconds());
         }, 1000);
 
         // Очищаем интервал при размонтировании компонента

@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Counter from './components/Counter';
 import TextInput from './components/TextInput';
+import TodoList from './components/TodoList';
+import Timer from './components/Timer';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         {/* TODO */}
         <Counter />
         <TextInput />
+        <TodoList />
+        <Timer />
 
 
 

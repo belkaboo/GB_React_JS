@@ -57,6 +57,7 @@ h3 {
 }
 
 button {
+  margin: 0px 20px;
   padding: 10px 20px;
   background-color: #61dafb;
   border: none;
@@ -73,10 +74,34 @@ button:active {
   font-size: 12px;
 }
 
-.text_input {
+.text_input,
+.todo-input {
   width: 400px;
   height: 1.5rem;
   border: none;
   border-radius: 5px;
   font-size: 1.5rem;
+}
+
+
+.todo {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: decimal;
+  padding-inline-start: 0px;
+
+}
+
+li {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  align-items: center;
 }
