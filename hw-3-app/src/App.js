@@ -6,6 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h3 style={{ color: '#fff' }}>Урок 3. Virtual DOM. Подключение библиотеки UI-компонентов</h3>
         <TemperatureConverter />
         <TodoList />
       </header>

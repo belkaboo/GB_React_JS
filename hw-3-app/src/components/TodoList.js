@@ -29,6 +29,7 @@ function TodoList() {
                 variant="outlined"
                 value={newTask}
                 onChange={(e) => setNewTask(e.target.value)}
+                multiline
             />
 
 
