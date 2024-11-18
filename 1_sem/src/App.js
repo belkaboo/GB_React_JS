@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
 import CurrentTime from './components/CurrentTime';
 import EventCard from "./components/EventCard";
