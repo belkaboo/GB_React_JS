@@ -1,0 +1,23 @@
+.box {
+    width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 15px;
+    background-color: #fff;
+    opacity: 0.8;
+
+
+}
+
+.converter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.text_field {
+    width: 100%;
+}
