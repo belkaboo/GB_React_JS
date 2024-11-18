@@ -7,17 +7,36 @@ function TodoList() {
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState('');
 
+    // const addTask = () => {
+    //     if (newTask.trim()) {
+    //         setTasks([...tasks, newTask.trim()]);
+    //         setNewTask('');
+    //     }
+    // };
+
     const addTask = () => {
         if (newTask.trim()) {
-            setTasks([...tasks, newTask.trim()]);
+            const task = {
+                id: Date.now(),
+                text: newTask.trim(),
+            }
+            setTasks([...tasks, task]);
             setNewTask('');
         }
-    };
+    }
 
-    const deleteTask = (index) => {
-        const updatedTasks = tasks.filter((_, i) => i !== index);
+
+    // const deleteTask = (index) => {
+    //     const updatedTasks = tasks.filter((_, i) => i !== index);
+    //     setTasks(updatedTasks);
+    // };
+
+    const deleteTask = (id) => {
+        const updatedTasks = tasks.filter((task) => task.id !== id);
         setTasks(updatedTasks);
-    };
+    }
+
+
 
     return (
         <div className='todo-container'>
@@ -44,15 +63,15 @@ function TodoList() {
 
 
             <List>
-                {tasks.map((task, index) => (
+                {tasks.map((task) => (
                     <ListItem
                         className='list-item'
-                        key={index}
+                        key={task.id}
                     >
-                        <ListItemText primary={task} />
+                        <ListItemText primary={task.text} />
                         <IconButton
                             color="error"
-                            onClick={() => deleteTask(index)}
+                            onClick={() => deleteTask(task.id)}
                         >
                             <DeleteIcon />
                         </IconButton>
