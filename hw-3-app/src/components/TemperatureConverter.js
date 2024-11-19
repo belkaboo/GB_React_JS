@@ -8,33 +8,33 @@ function TemperatureConverter() {
     const [fahrenheit, setFahrenheit] = useState('');
 
     const handleCelsiusChange = (e) => {
-        const value = e.target.value;
+        const value = e.target.value.trim();
 
-        if (isNaN(value)) return;
+        if (value === '' || isNaN(value)) {
+            setCelsius('');
+            setFahrenheit('');
+            return;
+        }
 
         setCelsius(value);
-
-        if (value === '') {
-            setFahrenheit('');
-        } else {
-            const converted = (parseFloat(value) * 9) / 5 + 32;
-            setFahrenheit(converted.toFixed(2));
-        }
+        const converted = (parseFloat(value) * 9) / 5 + 32;
+        setFahrenheit(converted.toFixed(2));
     };
 
     const handleFahrenheitChange = (e) => {
-        const value = e.target.value;
+        const value = e.target.value.trim();
 
-        if (isNaN(value)) return;
+        if (value === '' || isNaN(value)) {
+            setFahrenheit('');
+            setCelsius('');
+            return;
+
+        }
 
         setFahrenheit(value);
+        const converted = ((parseFloat(value) - 32) * 5) / 9;
+        setCelsius(converted.toFixed(2));
 
-        if (value === '') {
-            setCelsius('');
-        } else {
-            const converted = ((parseFloat(value) - 32) * 5) / 9;
-            setCelsius(converted.toFixed(2));
-        }
     };
 
     return (
