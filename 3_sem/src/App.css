@@ -7,6 +7,20 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  transition: all 0.5s;
+  padding: 20px 0px;
+}
+
+
+.container.dark {
+  background-color: #282c34;
+
+}
+
+.container.light {
+  background-color: #f9f9f9;
+  color: rgb(34, 34, 34);
+
 }
 
 form {
@@ -20,10 +34,14 @@ p {
 }
 
 .task {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
   margin: 20px;
   padding: 10px;
-  background-color: #5c5f66;
+  background-color: #838589;
   border-radius: 15px;
+  align-items: center;
 }
 
 input {
@@ -40,4 +58,10 @@ h3 {
 
 ul {
   list-style: decimal;
+}
+
+.textfield {
+  background-color: #838589;
+  border: none;
+  border-radius: 5px;
 }
