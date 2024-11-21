@@ -1,6 +1,6 @@
 import logo from './logo.png';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 
@@ -13,6 +13,7 @@ function App() {
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/about' element={<AboutPage />} />
+            <Route path='*' element={<Navigate to='/' />} />
           </Routes>
         </header>
       </div>
