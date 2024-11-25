@@ -14,6 +14,7 @@ function App() {
         style={{
           backgroundColor: isDark ? '#282c34' : '#9d9d9d',
           color: isDark ? 'white' : 'black',
+          transition: 'all 0.3s'
         }}
       >
         <img src={logo} className="App-logo" alt="logo" />
