@@ -1,12 +1,24 @@
 import logo from './logo.png';
 import './App.css';
+import { useSelector } from 'react-redux';
+import ThemeSwitcher from './components/ThemeSwitcher';
 
 function App() {
+
+  const isDark = useSelector((state) => state.theme.isDark);
+
   return (
     <div className="App">
-      <header className="App-header">
+      <header
+        className="App-header"
+        style={{
+          backgroundColor: isDark ? '#282c34' : '#9d9d9d',
+          color: isDark ? 'white' : 'black',
+        }}
+      >
         <img src={logo} className="App-logo" alt="logo" />
-        <h3 style={{ color: '#fff' }}>Урок 5. Компоненты высшего порядка знакомство с Redux</h3>
+        <h5>Урок 5. Компоненты высшего порядка знакомство с Redux</h5>
+        <ThemeSwitcher />
       </header>
     </div>
   );
