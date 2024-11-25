@@ -1,8 +1,9 @@
-import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from '../store/themeSlice';
-import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import { MaterialUISwitch } from './MaterialUiSwitch';
+
+
 
 function ThemeSwitcher() {
     const isDark = useSelector((state) => state.theme.isDark);
@@ -11,12 +12,9 @@ function ThemeSwitcher() {
     return (
         <div style={{ margin: '20px' }}>
             <FormControlLabel control={
-                <Switch
-                    label={isDark ? 'Темная тема' : 'Светлая тема'}
-                    checked={isDark}
-                    onChange={() => dispatch(toggleTheme())} />
-            }
-                label={isDark ? 'Темная тема' : 'Светлая тема'} />
+                <MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
+                label={isDark ? 'Темная тема' : 'Светлая тема'}
+                onChange={() => dispatch(toggleTheme())} />
         </div>
     );
 }
