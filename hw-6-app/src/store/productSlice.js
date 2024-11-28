@@ -12,12 +12,12 @@ const productSlice = createSlice({
         deleteProduct: (state, action) => {
             return state.filter((product) => product.id !== action.payload);
         },
-        //     updateProduct: (state, action) => {
-        //         const index = state.findIndex((product) => product.id === action.payload.id);
-        //         if (index !== -1) {
-        //             state[index] = { ...state[index], ...action.payload };
-        //         }
-        // },
+        updateProduct: (state, action) => {
+            const index = state.findIndex((product) => product.id === action.payload.id);
+            if (index !== -1) {
+                state[index] = { ...state[index], ...action.payload };
+            }
+        },
         toggleAvailability: (state, action) => {
             const product = state.find((product) => product.id === action.payload);
             if (product) {

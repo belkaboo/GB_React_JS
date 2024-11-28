@@ -38,8 +38,8 @@ function AddProduct() {
 
     return (
         <>
-            <Typography variant="h4" component="h2" gutterBottom>
-                Добавить продукт
+            <Typography variant="h4" component="h2">
+                Добавить товар
             </Typography>
             <div className='add-product'>
 
@@ -54,6 +54,7 @@ function AddProduct() {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     style={{ margin: '10px' }}
+
                 />
                 <TextField
                     label="Цена"
