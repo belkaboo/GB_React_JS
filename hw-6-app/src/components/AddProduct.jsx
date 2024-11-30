@@ -54,7 +54,6 @@ function AddProduct() {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     style={{ margin: '10px' }}
-
                 />
                 <TextField
                     label="Цена"
