@@ -4,6 +4,8 @@ import { fetchTasks } from "../store/tasksSlice";
 
 import CircularProgress from '@mui/material/CircularProgress';
 import Alert from '@mui/material/Alert';
+import DoneIcon from '@mui/icons-material/Done';
+import CancelIcon from '@mui/icons-material/Cancel';
 
 
 function TaskList() {
@@ -32,8 +34,8 @@ function TaskList() {
             <h3>Список задач</h3>
             <ul className="task-list">
                 {tasks.map((task) => (
-                    <li key={task.id} style={{ opacity: task.completed ? 0.5 : 1 }}>
-                        {task.completed ? "✔️ " : "❌ "} {task.title}
+                    <li key={task.id} style={{ opacity: task.completed ? 0.8 : 1 }}>
+                        {task.completed ? <DoneIcon className="done" fontSize="large" /> : <CancelIcon className='not-done' fontSize="large" />} {task.title}
                     </li>
                 ))}
             </ul>

@@ -49,6 +49,11 @@ ul {
   list-style-type: none;
 }
 
+li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
 .task-list {
   color: #282c34;
@@ -59,4 +64,13 @@ ul {
   border: none;
   border-radius: 15px;
 
+}
+
+.done {
+  align-items: center;
+  color: green;
+}
+
+.not-done {
+  color: rgb(150, 17, 17);
 }
