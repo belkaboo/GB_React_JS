@@ -6,6 +6,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Alert from '@mui/material/Alert';
 import DoneIcon from '@mui/icons-material/Done';
 import CancelIcon from '@mui/icons-material/Cancel';
+import Button from '@mui/material/Button';
 
 
 function TaskList() {
@@ -17,14 +18,19 @@ function TaskList() {
     }, [dispatch]);
 
     if (status === "loading") {
-        return <CircularProgress />;
+        return <CircularProgress color="inherit" size={80} />;
     }
 
     if (status === "failed") {
         return (
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-                <Alert severity="error">Ошибка загрузки задач! Попробуйте снова.</Alert>
-
+                <Alert severity="error" action={
+                    <Button color="primary" size="small" onClick={() => dispatch(fetchTasks())}>
+                        Повторить
+                    </Button>
+                }>
+                    Ошибка загрузки задач! Попробуйте снова.
+                </Alert>
             </div>
         );;
     }
