@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -38,10 +38,25 @@
   }
 }
 
+.task {
+  text-align: center;
+}
+
 ul {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
   list-style-type: none;
 }
 
-li {
-  font-size: 18px;
+
+.task-list {
+  color: #282c34;
+  margin: 20px;
+  padding: 20px;
+  background-color: #c2c0c0;
+  width: 400px;
+  border: none;
+  border-radius: 15px;
+
 }

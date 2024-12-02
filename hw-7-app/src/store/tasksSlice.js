@@ -3,9 +3,12 @@ import tasksData from "../data/tasks";
 
 
 export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async () => {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(tasksData);
+            if (Math.random() > 0.7) {
+                reject(new Error("Случайная ошибка загрузки!"));
+            }
+            else resolve(tasksData);
         }, 2000);
     });
 });
