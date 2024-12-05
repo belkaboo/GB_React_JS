@@ -7,6 +7,8 @@ import products from "./productsData";
 
 import { ReactComponent as CloseIcon } from "../images/close_icon.svg";
 
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 const CartPage = () => {
 
     const { cartItems, removeFromCart, updateCartItemQuantity, clearCart } = useContext(CartContext);
@@ -102,8 +104,8 @@ const CartPage = () => {
                                 })}
                             </div>
                             <div className="cart-box__buttons">
-                                <div className="cart-box__shopping_button">
-                                    <p className="cart-box__shopping_button_title" onClick={handleClearCart}>
+                                <div className="cart-box__shopping_button" onClick={handleClearCart}>
+                                    <p className="cart-box__shopping_button_title" >
                                         Clear shopping cart
                                     </p>
                                 </div>
@@ -141,7 +143,7 @@ const CartPage = () => {
                                 required
                             />
                             <div className="cart-box__shipping_button">
-                                <a className="cart-box__shipping_button_title" href="/">
+                                <a className="cart-box__shipping_button_title" href="#">
                                     GET A QUOTE
                                 </a>
                             </div>
@@ -157,7 +159,7 @@ const CartPage = () => {
                             </div>
                             <hr className="cart-box__checkout-line" />
                             <div className="cart-box__checkout-button">
-                                <a className="cart-box__checkout_button_title" href="/">
+                                <a className="cart-box__checkout_button_title" href="#">
                                     PROCEED TO CHECKOUT
                                 </a>
                             </div>

@@ -6,6 +6,8 @@ import { HandySvg } from 'handy-svg';
 import socialNetworkLink1 from "../images/social_net_link1.svg";
 import socialNetworketLink2 from "../images/social_net_link2.svg";
 
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 function Footer() {
     return (
         <footer className="footer">
@@ -34,7 +36,7 @@ function Footer() {
                                     name="email"
                                     placeholder="Enter Your Email"
                                 />
-                                <a className="subscribe_form_button" href="/#">Subscribe</a>
+                                <a className="subscribe_form_button" href="#">Subscribe</a>
                             </div>
                         </div>
                     </section>

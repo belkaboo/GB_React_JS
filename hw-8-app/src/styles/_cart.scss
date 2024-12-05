@@ -273,6 +273,7 @@
     }
 
     &__checkout-button:hover {
+        cursor: pointer;
         background-color: vars.$colorCommonDarkItems;
     }
 
